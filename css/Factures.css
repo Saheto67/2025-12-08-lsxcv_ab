@@ -1,0 +1,22 @@
+factures,facture,client,destinataire,adr1,adr2,lignes,ligne{
+	display:block;
+}
+factures:before{
+	display:block;
+	font-size:24pt;
+	text-align:center;
+	border: 1px solid black;
+	padding:5;
+	content: " factures: :" attr(dateeditionXML);
+}
+facture{
+	width:20cm;
+	height:28.7cm;
+	page-break-before:always;
+}
+client{
+	margin-top:5cm;
+	margin-bottom:5cm;
+	margin-left:14cm;
+	border : 1px solid black;
+}
