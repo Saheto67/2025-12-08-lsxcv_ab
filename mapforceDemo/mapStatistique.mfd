@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2023r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="current-date" library="xpath2" uid="5" kind="5">
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="828" lty="1" rbx="911" rby="37"/>
+				</component>
+				<component name="facturationtransfert" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="941" rbx="1382" rby="515"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="facturation" expanded="1">
+										<entry name="dateTransfert" type="attribute" inpkey="1"/>
+										<entry name="statFile" expanded="1">
+											<entry name="facturesStat" expanded="1">
+												<entry name="avgNbUnitFacture" inpkey="2" expanded="1"/>
+												<entry name="ligneAvgFact" inpkey="3"/>
+												<entry name="nbLignesFact" inpkey="4"/>
+											</entry>
+										</entry>
+										<entry name="factures" inpkey="5" expanded="1">
+											<entry name="facture" inpkey="6" expanded="1">
+												<entry name="idfacture" type="attribute" inpkey="46"/>
+												<entry name="nomClient" type="attribute" inpkey="47"/>
+												<entry name="prixAvgArticle" inpkey="48"/>
+												<entry name="ligneAvg" inpkey="49"/>
+												<entry name="nbLignes" inpkey="50"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="facturationtransfert.xsd" instanceroot="{}facturation" outputinstance="facturationtransfert.xml"/>
+					</data>
+				</component>
+				<component name="count" library="core" uid="7" kind="5">
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="760" lty="107" rbx="873" rby="160"/>
+				</component>
+				<component name="avg" library="core" uid="9" kind="5">
+					<sources>
+						<datapoint pos="0" key="10"/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="624" lty="69" rbx="737" rby="122"/>
+				</component>
+				<component name="avg" library="core" uid="11" kind="5">
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="14"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="502" lty="13" rbx="615" rby="66"/>
+				</component>
+				<component name="count" library="core" uid="18" kind="5">
+					<sources>
+						<datapoint pos="0" key="38"/>
+						<datapoint pos="1" key="40"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="760" lty="341" rbx="873" rby="394"/>
+				</component>
+				<component name="avg" library="core" uid="20" kind="5">
+					<sources>
+						<datapoint pos="0" key="37"/>
+						<datapoint pos="1" key="45"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="44"/>
+					</targets>
+					<view ltx="502" lty="247" rbx="615" rby="300"/>
+				</component>
+				<component name="avg" library="core" uid="19" kind="5">
+					<sources>
+						<datapoint pos="0" key="41"/>
+						<datapoint pos="1" key="43"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="42"/>
+					</targets>
+					<view ltx="624" lty="303" rbx="737" rby="356"/>
+				</component>
+				<component name="factureXPATHCSS" library="xml" uid="2" kind="14">
+					<properties/>
+					<view ltx="40" rbx="418" rby="515"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="factures" outkey="17" expanded="1">
+										<entry name="facture" outkey="21" expanded="1">
+											<entry name="numfacture" type="attribute" outkey="51"/>
+											<entry name="idclient" type="attribute" outkey="52"/>
+											<entry name="client" expanded="1"/>
+											<entry name="lignes" expanded="1">
+												<entry name="ligne" outkey="18" expanded="1">
+													<entry name="phtByUnit" outkey="53"/>
+													<entry name="nbUnit" outkey="20"/>
+													<entry name="stotligne" outkey="19"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\css\factureXPATHCSS.xsd" instanceroot="{}factures" inputinstance="..\css\Facture3.xml" outputinstance="..\css\Facture3.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="2"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="5"/>
+							<edge vertexkey="7"/>
+							<edge vertexkey="10"/>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="6"/>
+							<edge vertexkey="37"/>
+							<edge vertexkey="38"/>
+							<edge vertexkey="41"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="8"/>
+							<edge vertexkey="40"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="11"/>
+							<edge vertexkey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="50"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
