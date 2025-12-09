@@ -5,9 +5,15 @@
 		<facturation dateTransfert="2025-12-09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///G:/partage/2025-12-08-lsxcv/xsl/facturationStatCode/facturationtransfert.xsd">
 			<statFile>
 				<facturesStat>
-					<avgNbUnitFacture refproduits="a"></avgNbUnitFacture>
-					<ligneAvgFact></ligneAvgFact>
-					<nbLignesFact></nbLignesFact>
+					<avgNbUnitFacture refproduits="a">
+						<xsl:value-of select="sum(//nbUnit) div count(//nbUnit)"/>
+					</avgNbUnitFacture>
+					<ligneAvgFact>
+						<xsl:value-of select="sum(//stotligne) div count(//stotligne)"/>
+					</ligneAvgFact>
+					<nbLignesFact>
+						<xsl:value-of select="count(//ligne)"/>
+					</nbLignesFact>
 				</facturesStat>
 			</statFile>
 			<factures>
