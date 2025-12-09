@@ -21,7 +21,11 @@
 			</factures>
 		</facturation>
 	</xsl:template>
-	<xsl:template match="facture">
+	<xsl:template match="facture[contains(@type,'evis')]" priority="1.1">
+		<!--echapement des devis-->
+		<xsl:comment>devis non pris en compte</xsl:comment>
+	</xsl:template>
+	<xsl:template match="/factures/facture">
 		<facture idfacture="" nomClient="">
 			<prixAvgArticle refproduits="a">
 				<xsl:value-of select="sum(.//phtByUnit) div count(.//phtByUnit)"/>
