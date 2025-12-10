@@ -12,7 +12,7 @@
 			<statFile>
 				<facturesStat>
 					<avgNbUnitFacture>
-						<xsl:attribute name="refproduit">
+						<xsl:attribute name="refproduits">
 							<xsl:apply-templates select="//ligne"/>
 						</xsl:attribute>
 						<xsl:value-of select="sum(//nbUnit) div count(//nbUnit)"/>
@@ -46,7 +46,7 @@
 	<xsl:template match="/factures/facture">
 		<facture idfacture="{@numfacture}" nomClient="{@idclient}">
 			<prixAvgArticle>
-				<xsl:attribute name="refproduit">
+				<xsl:attribute name="refproduits">
 					<xsl:apply-templates select=".//ligne"/>
 				</xsl:attribute>
 				<xsl:value-of select="sum(.//phtByUnit) div count(.//phtByUnit)"/>
