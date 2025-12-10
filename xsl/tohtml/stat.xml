@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dateTransfert="2025-12-09" xsi:noNamespaceSchemaLocation="file:///G:/partage/2025-12-08-lsxcv/xsl/facturationStatCode/facturationtransfert.xsd">
+	<statFile>
+		<facturesStat>
+			<avgNbUnitFacture refproduits="REF-2134 REF-2135 REF-1934 REF-2234 REF-2234 REF-2234 REF-2134 REF-2135-2 REF-2234">1.27777777777778</avgNbUnitFacture>
+			<ligneAvgFact>34.4798888888889</ligneAvgFact>
+			<nbLignesFact>9</nbLignesFact>
+		</facturesStat>
+	</statFile>
+	<factures>
+		<facture idfacture="5" nomClient="132">
+			<prixAvgArticle refproduits="REF-2234 REF-2134 REF-2135-2">7.61666666666667</prixAvgArticle>
+			<ligneAvg>32.975</ligneAvg>
+			<nbLignes>3</nbLignes>
+		</facture>
+		<facture idfacture="8" nomClient="234">
+			<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+			<ligneAvg>69.65</ligneAvg>
+			<nbLignes>1</nbLignes>
+		</facture>
+		<facture idfacture="11" nomClient="234">
+			<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+			<ligneAvg>24.873</ligneAvg>
+			<nbLignes>1</nbLignes>
+		</facture>
+		<facture idfacture="12" nomClient="123">
+			<prixAvgArticle refproduits="REF-2134 REF-2135 REF-1934">8.28333333333333</prixAvgArticle>
+			<ligneAvg>14.0823333333333</ligneAvg>
+			<nbLignes>3</nbLignes>
+		</facture>
+		<facture idfacture="23" nomClient="234">
+			<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+			<ligneAvg>74.624</ligneAvg>
+			<nbLignes>1</nbLignes>
+		</facture>
+	</factures>
+</facturation>

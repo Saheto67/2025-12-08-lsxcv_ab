@@ -1,0 +1,298 @@
+<html xmlns:factureFunc="urn:orsys:lsx:function:facture">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<style type="text/css">
+					/*style css*/
+					@media print{
+						.facture{
+							page-break-before:always;
+							height:27cm;
+						}
+					}
+					.facture{
+						width:20cm;
+						/*border:1px solid black;*/
+					}
+					.bloc-adresse{
+						width:6cm;
+						height:4cm;
+						border:1px solid black;
+					}
+					.emeteur{}
+					.client{
+						margin-left:12cm;
+					}
+					.numerofacture{
+						border:1px solid black;
+						background-color:#ACACAC;
+						text-align:center;
+						margin:2cm 4cm;
+						padding:0.3cm;
+						font-weight:900;
+						font-size:large;
+					}
+					.table-container{
+						padding:0 1cm;
+					}
+					table{
+						width:100%;
+						border-spacing: 0;
+						border-collapse: collapse;
+					}
+					table td, table th{
+						border:1px solid black;
+					}
+					table thead{
+						background-color:#AFAFAF;
+					}
+					.no-border{
+						border:none ;
+						text-align:right ;
+					}
+				</style>
+	</head>
+	<body>
+		<div class="facture">
+			<div class="emeteur bloc-adresse">emeteur</div>
+			<div class="client bloc-adresse">client</div>
+			<div class="numerofacture">numero facture</div>
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th>REF</th>
+							<th>designation</th>
+							<th>€/unit.</th>
+							<th>quant.</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>REF-2134</td>
+							<td>Lavage SOL </td>
+							<td>5,95€
+		</td>
+							<td>1.5</td>
+							<td>8,92€
+		</td>
+						</tr>
+						<tr>
+							<td>REF-2135</td>
+							<td>Peinture SOL forfait &lt;20m² </td>
+							<td>8,95€
+		</td>
+							<td>1.5</td>
+							<td>13,43€
+		</td>
+						</tr>
+						<tr>
+							<td>REF-1934</td>
+							<td>Peinture Blanc pot 5L</td>
+							<td>9,95€
+		</td>
+							<td>2</td>
+							<td>19,90€
+		</td>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total HT :</td>
+							<th>42,24€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant TVA 20% :</td>
+							<th>8,45€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total TTC :</td>
+							<th>50,69€</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="facture">
+			<div class="emeteur bloc-adresse">emeteur</div>
+			<div class="client bloc-adresse">client</div>
+			<div class="numerofacture">numero facture</div>
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th>REF</th>
+							<th>designation</th>
+							<th>€/unit.</th>
+							<th>quant.</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>REF-2234</td>
+							<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+							<td>9,95€
+		</td>
+							<td>0.5</td>
+							<td>74,62€
+		</td>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total HT :</td>
+							<th>74,62€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant TVA 20% :</td>
+							<th>14,92€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total TTC :</td>
+							<th>89,54€</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="facture">
+			<div class="emeteur bloc-adresse">emeteur</div>
+			<div class="client bloc-adresse">client</div>
+			<div class="numerofacture">numero facture</div>
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th>REF</th>
+							<th>designation</th>
+							<th>€/unit.</th>
+							<th>quant.</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>REF-2234</td>
+							<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+							<td>9,95€
+		</td>
+							<td>0.5</td>
+							<td>69,65€
+		</td>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total HT :</td>
+							<th>69,65€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant TVA 20% :</td>
+							<th>13,93€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total TTC :</td>
+							<th>83,58€</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="facture">
+			<div class="emeteur bloc-adresse">emeteur</div>
+			<div class="client bloc-adresse">client</div>
+			<div class="numerofacture">numero facture</div>
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th>REF</th>
+							<th>designation</th>
+							<th>€/unit.</th>
+							<th>quant.</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>REF-2234</td>
+							<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+							<td>9,95€
+		</td>
+							<td>0.5</td>
+							<td>69,65€
+		</td>
+						</tr>
+						<tr>
+							<td>REF-2134</td>
+							<td>Lavage SOL </td>
+							<td>5,95€
+		</td>
+							<td>2</td>
+							<td>11,90€
+		</td>
+						</tr>
+						<tr>
+							<td>REF-2135-2</td>
+							<td>Peinture SOL forfait &gt;20m² </td>
+							<td>6,95€
+		</td>
+							<td>2.5</td>
+							<td>17,38€
+		</td>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total HT :</td>
+							<th>98,93€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant TVA 20% :</td>
+							<th>19,79€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total TTC :</td>
+							<th>118,72€</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="facture">
+			<div class="emeteur bloc-adresse">emeteur</div>
+			<div class="client bloc-adresse">client</div>
+			<div class="numerofacture">numero facture</div>
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th>REF</th>
+							<th>designation</th>
+							<th>€/unit.</th>
+							<th>quant.</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>REF-2234</td>
+							<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+							<td>9,95€
+		</td>
+							<td>0.5</td>
+							<td>24,87€
+		</td>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total HT :</td>
+							<th>24,87€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant TVA 20% :</td>
+							<th>4,97€</th>
+						</tr>
+						<tr>
+							<td class="no-border" colspan="4">Montant total TTC :</td>
+							<th>29,84€</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
