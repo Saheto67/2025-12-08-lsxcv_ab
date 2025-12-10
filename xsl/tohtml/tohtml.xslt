@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:factureFunc="urn:orsys:lsx:function:facture">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:factureFunc="urn:orsys:lsx:function:facture"  xmlns:html="http://www.w3.org/1999/xhtml">
 	<xsl:include href="toStatistiqueXML.xslt"/>
 	<xsl:variable name="allStotligne">
 		<alltot>
@@ -167,12 +167,15 @@
 			<xsl:value-of select="/factures/@villeets"/>
 		</div>
 	</xsl:template>
+	<xsl:template match="html:*">
+		<xsl:element name="{name()}">
+			<xsl:apply-templates select="*|text()"/>
+		</xsl:element>
+	</xsl:template>
 	<xsl:template match="@idclient">
 		<xsl:variable name="idc" select="."/>
 		<xsl:variable name="docClient" select="document('clients.xml')/clients/client[@id=$idc]"/>
-		
-			<xsl:apply-templates select="$docClient"/>
-	
+		<xsl:apply-templates select="$docClient"/>
 	</xsl:template>
 	<xsl:template match="clients/client">
 		<div class="client bloc-adresse">
@@ -202,7 +205,8 @@ l'un ou lautre (filtrage par nom de balise dans une position) ou (pipe sur no de
 	</xsl:template>
 	<xsl:template match="ligne/*">
 		<td>
-			<xsl:value-of select="."/>
+			<!--<xsl:value-of select="."/>-->
+			<xsl:apply-templates select="*|text()"/>
 		</td>
 	</xsl:template>
 	<xsl:function name="factureFunc:somme-arrondi-stotligne">
