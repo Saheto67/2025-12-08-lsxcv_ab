@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<html>
@@ -130,27 +130,34 @@ l'un ou lautre (filtrage par nom de balise dans une position) ou (pipe sur no de
 	
 	<xsl:template name="somme-arrondi-stotligne">
 		<xsl:param name="somme" select="0"/>
-		<xsl:param name="current" select=".//ligne[1]"/>	
+		<xsl:param name="current"/>
 		<xsl:choose>
 			<xsl:when test="$current/following-sibling::ligne">
 				<xsl:call-template name="somme-arrondi-stotligne">
-					<xsl:with-param name="somme" select="$somme+format-number($current/stotligne,'0.00')"/>
+					<xsl:with-param name="somme" select="$somme+number(format-number($current/stotligne[1],'0.00'))"/>
 					<xsl:with-param name="current" select="$current/following-sibling::ligne[1]"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="$somme+format-number($current/stotligne,'0.00')"/>
+				<xsl:value-of select="$somme+number(format-number($current/stotligne,'0.00'))"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="totaux">
-		<xsl:param name="nodes" select="."/>
+		<xsl:param name="nodes" select="." />
+		<xsl:variable name="listStotLigne">
+			<totaux>
+				<xsl:copy-of select=".//ligne"/>
+			</totaux>
+		</xsl:variable>
 		<xsl:variable name="totalHT">
-			<xsl:call-template name="somme-arrondi-stotligne"/>
+			<xsl:call-template name="somme-arrondi-stotligne">
+			<xsl:with-param name="current" select="$listStotLigne//ligne[1]"/>
+			</xsl:call-template>
 		</xsl:variable>
 		<!--<xsl:variable name="totalHT" select="sum($nodes//stotligne)"/>-->
-		<xsl:variable name="totalTVA" select="format-number($totalHT*0.2,'0.00')"/>
+		<xsl:variable name="totalTVA" select="number(format-number($totalHT*0.2,'0.00'))"/>
 		<tr>
 			<td class="no-border" colspan="4">Montant total HT :</td>
 			<th><xsl:value-of select="format-number($totalHT,'0,00€','eur-currency')"/></th>
