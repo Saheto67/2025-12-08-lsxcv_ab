@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+	<value>
+		<angle>0</angle>
+		<ba>0.0</ba>
+		<br>20.0</br>
+	</value>
+	<value>
+		<angle>45</angle>
+		<ba>1</ba>
+		<br>-7</br>
+	</value>
+	<value>
+		<angle>90</angle>
+		<ba>1</ba>
+		<br>-18</br>
+	</value>
+	<value>
+		<angle>135</angle>
+		<ba>14</ba>
+		<br>-43</br>
+	</value>
+	<value>
+		<angle>180</angle>
+		<ba>8</ba>
+		<br>-35</br>
+	</value>
+	<value>
+		<angle>225</angle>
+		<ba>15</ba>
+		<br>-9</br>
+	</value>
+	<value>
+		<angle>270</angle>
+		<ba>9</ba>
+		<br>9</br>
+	</value>
+	<value>
+		<angle>315</angle>
+		<ba>15</ba>
+		<br>50</br>
+	</value>
+	<conclusion>
+Nulla facilisi. Nunc nec elit. Integer ornare  convallis tortor. Proin ac diam. In est sapien, laoreet euismod,  mattis a, tincidunt at, risus. Vivamus risus. Vestibulum aliquam,  urna aliquam porttitor accumsan, nulla tortor ullamcorper elit, ut  consequat augue purus sit amet libero. Vivamus nisl lacus, commodo  vel, dignissim ut, vestibulum id, pede. Curabitur malesuada  hendrerit libero. Mauris quis dolor in tellus varius posuere. Sed  vulputate elit at wisi. Fusce vitae neque. Nulla consectetuer, nunc  ac eleifend laoreet, mi nulla commodo wisi, vel faucibus ligula  lectus ut arcu. Vivamus hendrerit.
+
+Morbi nunc. Aliquam consectetuer varius nulla.  Phasellus eros. Cras dapibus porttitor risus. Maecenas ultrices mi  sed diam. Praesent gravida velit at elit vehicula porttitor.  Phasellus nisl mi, sagittis ac, pulvinar id, gravida sit amet, erat.  Vestibulum est. Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Curabitur id sem elementum leo rutrum hendrerit. Ut at mi.  Donec tincidunt faucibus massa. Sed turpis quam, sollicitudin a,  hendrerit eget, pretium ut, nisl. Duis hendrerit ligula. Nunc  pulvinar congue urna.
+	</conclusion>
+</test>
