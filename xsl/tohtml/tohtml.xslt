@@ -131,7 +131,7 @@
 	<xsl:template match="facture" mode="html-files">
 		<div class="facture">
 			<xsl:call-template name="emeteur"/>
-			<div class="client bloc-adresse">client</div>
+			<xsl:apply-templates select="@idclient"/>
 			<div class="numerofacture">numero facture</div>
 			<div class="table-container">
 				<table>
@@ -165,6 +165,24 @@
 			<xsl:value-of select="/factures/@cpets"/>
 			<xsl:text> </xsl:text>
 			<xsl:value-of select="/factures/@villeets"/>
+		</div>
+	</xsl:template>
+	<xsl:template match="@idclient">
+		<xsl:variable name="idc" select="."/>
+		<xsl:variable name="docClient" select="document('clients.xml')/clients/client[@id=$idc]"/>
+		
+			<xsl:apply-templates select="$docClient"/>
+	
+	</xsl:template>
+	<xsl:template match="clients/client">
+		<div class="client bloc-adresse">
+			<xsl:value-of select="destinataire"/><br/>
+			<xsl:value-of select="adr1"/><br/>
+			<xsl:if test="string-length(adr2)>0">
+				<xsl:value-of select="adr2"/><br/>
+			</xsl:if>
+			<xsl:value-of select="cp"/><xsl:text> </xsl:text>
+			<xsl:value-of select="ville"/>
 		</div>
 	</xsl:template>
 	<xsl:template match="ligne" mode="html-files">
