@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="toStatistiqueXML.xslt" type="text/xsl"?>
+<factures rsets="ECO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="factureXPATHCSS.xsd">
+	<facture numfacture="12" datefacture="2012-08-10" type="Devis" idclient="123">
+		<client>
+			<destinataire>jean rostremer</destinataire>
+			<adr1>chemin de l'homme dormant</adr1>
+			<adr2/>
+			<cp></cp>
+			<ville>Nancy Lest</ville>
+		</client>
+		<lignes>
+			<ligne>
+				<ref>REF-2134</ref>
+				<designation>Lavage SOL </designation>
+				<phtByUnit>5.95</phtByUnit>
+				<nbUnit typeUnit="HOUR">1.5</nbUnit>
+				<stotligne>8.922</stotligne>
+			</ligne>
+			<ligne>
+				<ref>REF-2135</ref>
+				<designation>Peinture SOL forfait &lt;20m² </designation>
+				<phtByUnit>8.95</phtByUnit>
+				<nbUnit typeUnit="UNIT">1.5</nbUnit>
+				<stotligne>13.425</stotligne>
+			</ligne>
+			<ligne>
+				<ref>REF-1934</ref>
+				<designation>Peinture Blanc pot 5L</designation>
+				<phtByUnit>9.95</phtByUnit>
+				<nbUnit typeUnit="UNIT">2</nbUnit>
+				<stotligne>19.90</stotligne>
+			</ligne>
+		</lignes>
+	</facture>
+	<facture numfacture="23" datefacture="2012-09-04" type="Facture" idclient="234">
+		<lignes>
+			<ligne>
+				<ref>REF-2234</ref>
+				<designation>Pose BA13 (forfait plaque +MO) au m2 </designation>
+				<surface unite="m2">15</surface>
+				<phtByUnit>9.95</phtByUnit>
+				<nbUnit typeUnit="HOURBYMETER2">0.5</nbUnit>
+				<stotligne>74.624</stotligne>
+			</ligne>
+		</lignes>
+	</facture>
+	<facture numfacture="08" datefacture="2013-07-04" type="devis" idclient="234">
+		<lignes>
+			<ligne>
+				<ref>REF-2234</ref>
+				<designation>Pose BA13 (forfait plaque +MO) au m2 </designation>
+				<surface unite="m2">15</surface>
+				<phtByUnit>9.95</phtByUnit>
+				<nbUnit typeUnit="HOURBYMETER2">0.5</nbUnit>
+				<stotligne>69.65</stotligne>
+			</ligne>
+		</lignes>
+	</facture>
+	<facture numfacture="05" datefacture="2012-06-21" type="facture" idclient="132">
+		<lignes>
+			<ligne>
+				<ref>REF-2234</ref>
+				<designation>Pose BA13 (forfait plaque +MO) au m2 </designation>
+				<surface unite="m2">15</surface>
+				<phtByUnit>9.95</phtByUnit>
+				<nbUnit typeUnit="HOURBYMETER2">0.5</nbUnit>
+				<stotligne>69.65</stotligne>
+			</ligne>
+			<ligne>
+				<ref>REF-2134</ref>
+				<designation>Lavage SOL </designation>
+				<phtByUnit>5.95</phtByUnit>
+				<nbUnit typeUnit="HOUR">2</nbUnit>
+				<stotligne>11.90</stotligne>
+			</ligne>
+			<ligne>
+				<ref>REF-2135-2</ref>
+				<designation>Peinture SOL forfait &gt;20m² </designation>
+				<phtByUnit>6.95</phtByUnit>
+				<nbUnit typeUnit="UNIT">2.5</nbUnit>
+				<stotligne>17.375</stotligne>
+			</ligne>
+		</lignes>
+	</facture>
+	<facture numfacture="11" refdevis="08" datefacture="2012-07-05" type="facture" idclient="234">
+		<lignes>
+			<ligne>
+				<ref>REF-2234</ref>
+				<designation>Pose BA13 (forfait plaque +MO) au m2 </designation>
+				<surface unite="m2">5</surface>
+				<phtByUnit>9.95</phtByUnit>
+				<nbUnit typeUnit="HOURBYMETER2">0.5</nbUnit>
+				<stotligne>24.873</stotligne>
+			</ligne>
+		</lignes>
+	</facture>
+	
+</factures>
